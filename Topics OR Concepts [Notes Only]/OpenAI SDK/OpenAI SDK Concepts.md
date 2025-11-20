@@ -1,15 +1,13 @@
-# **Series: OpenAI Agent SDK**
+# **Series: OpenAI Agent SDK — Organized Notes (Video 1 Recap)**
 
-* Followed: 
-  - https://ai.google.dev/gemini-api/docs/quickstart
 ---
 
-## **1. Goal**
+## **1. Goal of the Series**
 
 **Objective:**
 Learn how to build **AI Agents** using **OpenAI’s Agent SDK** (TypeScript version).
 
-**Will cover:**
+**We will cover:**
 
 * What are **Agents**
 * What is **OpenAI Agent SDK**
@@ -22,10 +20,22 @@ Learn how to build **AI Agents** using **OpenAI’s Agent SDK** (TypeScript vers
 
 > **Style:** Practical & code-heavy series (less theory, more implementation)
 
+---
+
+## **2. What You’ll Need**
+
+| Requirement               | Description                                           |
+| ------------------------- | ----------------------------------------------------- |
+| **OpenAI Account**        | Needed for API key                                    |
+| **$5 Credit**             | Minimum top-up (₹200 approx). Enough for whole series |
+| **Node.js (v18+)**        | Required to use TypeScript SDK                        |
+| **VS Code + Terminal**    | Development environment                               |
+| **Basic TS/JS Knowledge** | For code examples                                     |
+| **Optional:** Gemini SDK  | Free alternative but lower quality outputs            |
 
 ---
 
-## **2. What is an “Agent”?**
+## **3. What is an “Agent”?**
 
 ### **Concept**
 
@@ -44,7 +54,7 @@ Learn how to build **AI Agents** using **OpenAI’s Agent SDK** (TypeScript vers
 
 ---
 
-## **3. Why Do We Need Agents?**
+## **4. Why Do We Need Agents?**
 
 | Case                | Explanation                                                                   |
 | ------------------- | ----------------------------------------------------------------------------- |
@@ -60,7 +70,7 @@ Learn how to build **AI Agents** using **OpenAI’s Agent SDK** (TypeScript vers
 
 ---
 
-## **4. How Agent Works Internally**
+## **5. How Agent Works Internally**
 
 ### **Building Blocks of an Agent**
 
@@ -78,7 +88,7 @@ Learn how to build **AI Agents** using **OpenAI’s Agent SDK** (TypeScript vers
 
 ---
 
-## **5. What Makes SDK Important?**
+## **6. What Makes SDK Important?**
 
 Without SDK → You’d have to build everything manually:
 
@@ -97,7 +107,7 @@ So SDK = **Abstraction Layer + Framework for Agentic Apps**
 
 ---
 
-## **6. OpenAI Agent SDK vs Google Agent Development Kit**
+## **7. OpenAI Agent SDK vs Google Agent Development Kit**
 
 | Feature       | OpenAI Agent SDK                                                           | Google Agent Dev Kit                                           |
 | ------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -110,7 +120,7 @@ So SDK = **Abstraction Layer + Framework for Agentic Apps**
 
 ---
 
-## **7. Agent = LLM + Tools + Instructions (+ Guards + Observability)**
+## **8. Agent = LLM + Tools + Instructions (+ Guards + Observability)**
 
 ```
 User Query --> Agent --> 
@@ -120,7 +130,7 @@ User Query --> Agent -->
 
 ---
 
-## **8. Real-World Analogy**
+## **9. Real-World Analogy**
 
 | Type      | Example                                                                                                 |
 | --------- | ------------------------------------------------------------------------------------------------------- |
@@ -129,7 +139,7 @@ User Query --> Agent -->
 
 ---
 
-## **9. Key Terminologies Introduced**
+## **10. Key Terminologies Introduced**
 
 | Term              | Meaning                                          |
 | ----------------- | ------------------------------------------------ |
@@ -142,52 +152,57 @@ User Query --> Agent -->
 | **Orchestration** | Multiple agents collaborating                    |
 | **Human in Loop** | Manual review system                             |
 | **Training Logs** | Used for improving the agent over time           |
+
+---
+
+## **11. Next Video Preview**
+
+Next in the series (Video 2), he will show:
+
+1. How to **sign up** on OpenAI
+2. How to **create API Keys**
+3. How to **install Agent SDK**
+4. How to **run your first Agent**
+
+---
+
+## **12. Suggested Folder Setup**
+
+```
+📁 openai-agent-series
+ ┣ 📁 01-intro
+ ┃ ┗── notes.md
+ ┣ 📁 02-setup
+ ┃ ┣── index.ts
+ ┃ ┗── .env
+ ┣ 📁 03-basic-agent
+ ┃ ┣── agent.ts
+ ┃ ┗── tools/
+ ┣ 📁 04-guards
+ ┣ 📁 05-mcp
+ ┗ 📁 06-deployment
+```
+
+---
+
+## **13. Investment Mindset**
+
+* Spend small ($5) but gain deep knowledge of **Agentic Systems**.
+* This cost = **your learning investment**, not expense.
+
+---
+
+## **14. Action Items for You**
+
+✅ Create OpenAI account
+✅ Add $5 credit
+✅ Install Node.js & VS Code
+✅ Wait for next video — setup + first agent
+
 ---
 
 ## **Summary (In One Line)**
 
 > “An **Agent** is an LLM empowered with tools, rules, and context — built to perform real-world tasks safely and intelligently. The **OpenAI Agent SDK** is your shortcut to building them fast.”
 
-## GOAL: Use reusable Gemini client setup
-
-```js
-// Import the pre-configured Gemini client instance
-import ai from "../utils/geminiClient.js";
-
-// Async main function to handle API call
-async function main() {
-  // Send text input to Gemini model and await generated response
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: "What is OpenAI, in short in short?",
-  });
-
-  // Print the text output from the response
-  console.log("Response:", response.text);
-}
-
-// Run the function
-await main();
-```
-
-### Internal Data Flow
-
-```md
-┌─────────────────────────────────────┐
-│ Your Code                           │
-│                                     │
-│ ai.models.generateContent(...)      │
-│    ↓                                │
-│ Gemini SDK builds HTTP request      │
-│    ↓                                │
-│ Sends JSON → Google API endpoint    │
-│    ↓                                │
-│ Model runs (tokenization → output)  │
-│    ↓                                │
-│ JSON response ← Gemini Server       │
-│    ↓                                │
-│ SDK parses → { text, output, etc. } │
-│    ↓                                │
-│ console.log(response.text)          │
-└─────────────────────────────────────┘
-```
+---

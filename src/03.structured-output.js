@@ -13,7 +13,7 @@ const infoSchema = z.object({
 });
 
 // Write the natural language text to extract data from
-const prompt = `Elon musk founded SpaceX in 2002 in California`;
+const prompt = `Elon Musk founded SpaceX in 2002 in California.`;
 
 // Ask Gemini for structured output following your schema
 async function main() {
