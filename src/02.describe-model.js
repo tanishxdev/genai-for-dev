@@ -13,13 +13,19 @@ import ai from "../utils/geminiClient.js";
 async function main() {
   const response = await ai.models.generateContent({
     model: "gemini-2.5-flash",
-    contents: "Explain NodeJS .",
+
+    // IMPORTANT: systemInstruction must be TOP-LEVEL, not inside config
+    systemInstruction: "You are an expert AI tutor explaining clearly.",
+
+    // USER INPUT
+    contents: "Explain NodeJS.",
+
+    // GENERATION BEHAVIOR
     config: {
-      temperature: 0.1,  // lower randomness → more factual answers
-      maxOutputTokens: 150, // limit output length
-      systemInstruction: "You are an expert AI tutor explaining clearly.",
+      temperature: 0.1,          // lower randomness → more factual answers
+      maxOutputTokens: 150,      // limit output length
       thinkingConfig: {
-        thinkingBudget: 0 // disable thinking for faster response
+        thinkingBudget: 0        // disable thinking for faster response
       }
     }
   });
