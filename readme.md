@@ -71,10 +71,10 @@ Each module includes:
 
 ## **0.1 JavaScript / TypeScript Foundations**
 
-* [ ] 1. Variables, scope, hoisting
-* [ ] 2. Functions, closures
-* [ ] 3. Promises, async/await
-* [ ] 4. Error handling
+* [x] 1. Variables, scope, hoisting
+* [x] 2. Functions, closures
+* [x] 3. Promises, async/await
+* [x] 4. Error handling
 * [ ] 5. ES modules
 * [ ] 6. Classes + OOP
 * [ ] 7. JSON parsing & serialization
