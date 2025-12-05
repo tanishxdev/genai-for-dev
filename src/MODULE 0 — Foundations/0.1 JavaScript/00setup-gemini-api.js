@@ -1,7 +1,7 @@
 // GOAL: Use reusable Gemini client setup
 
 // Import the pre-configured Gemini client instance
-import ai from "../utils/geminiClient.js";
+import ai from "../../../utils/geminiClient.js";
 
 // Async main function to handle API call
 async function main() {

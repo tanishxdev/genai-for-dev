@@ -75,12 +75,12 @@ Each module includes:
 * [x] 2. Functions, closures
 * [x] 3. Promises, async/await
 * [x] 4. Error handling
-* [ ] 5. ES modules
-* [ ] 6. Classes + OOP
-* [ ] 7. JSON parsing & serialization
-* [ ] 8. Fetch / Axios
-* [ ] 9. Event loop & microtasks
-* [ ] 10. Basic TypeScript
+* [x] 5. ES modules
+* [x] 6. Classes + OOP
+* [x] 7. JSON parsing & serialization
+* [x] 8. Fetch / Axios
+* [x] 9. Event loop & microtasks
+* [x] 10. Basic TypeScript
 
 ## **0.2 Backend Foundations (Node.js)**
 
